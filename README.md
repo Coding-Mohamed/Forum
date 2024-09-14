@@ -35,10 +35,8 @@ Discussion Hub is a full-stack forum application built using Next.js, Convex, an
 
 ### 1. Clone the repository
 
-# Clone the repository
-
 ```bash
-git clone https://github.com/Coding-Mohamed/Forum
+git clone https://github.com/Coding-Mohamed/Forum.git
 cd Forum
 ```
 
