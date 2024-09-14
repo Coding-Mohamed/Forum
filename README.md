@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+# Forum
+
+# Discussion Hub is a full-stack forum application built using Next.js, Convex, and Clerk for secure user authentication. Users can create threads, comment on discussions, upvote or downvote threads, and enjoy real-time updates in a responsive and intuitive platform.
+
 # Discussion Hub
 
 Discussion Hub is a full-stack forum application built using Next.js, Convex, and Clerk for secure user authentication. Users can create, comment on, upvote, and downvote threads. The platform offers a responsive and engaging user experience, designed for seamless discussions and real-time updates.
@@ -29,8 +35,14 @@ Discussion Hub is a full-stack forum application built using Next.js, Convex, an
 
 ### 1. Clone the repository
 
+# Clone the repository
+
 ```bash
-git clone <repository-url>
+git clone https://github.com/Coding-Mohamed/Forum
+cd Forum
+```
+
+```
 cd forum
 ```
 
@@ -65,4 +77,3 @@ npm run dev
 ### Note
 
 Excited to share my Fullstack Forum inspired by Reddit! This project is a work in progress, and I look forward to adding more features and improvements. Stay tuned for updates!
->>>>>>> 5b71c60 (Initial commit)
