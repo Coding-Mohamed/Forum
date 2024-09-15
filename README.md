@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-# Forum
-
-# Discussion Hub is a full-stack forum application built using Next.js, Convex, and Clerk for secure user authentication. Users can create threads, comment on discussions, upvote or downvote threads, and enjoy real-time updates in a responsive and intuitive platform.
-
 # Discussion Hub
 
 Discussion Hub is a full-stack forum application built using Next.js, Convex, and Clerk for secure user authentication. Users can create, comment on, upvote, and downvote threads. The platform offers a responsive and engaging user experience, designed for seamless discussions and real-time updates.
