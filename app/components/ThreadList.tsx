@@ -24,7 +24,6 @@ export default function ThreadList() {
   const categories = rawCategories ? Array.from(new Set(rawCategories.map((category) => normalizeCategory(category)))) : [];
 
   useEffect(() => {
-    console.log("Threads useEffect triggered");
     console.log("Threads:", threads);
     if (threads !== undefined) {
       setLoading(false);
@@ -58,9 +57,9 @@ export default function ThreadList() {
   };
 
   return (
-    <div className="w-full max-w-8xl mx-auto p-4">
-      <div className="flex justify-between mb-4">
-        <select value={selectedCategory || ""} onChange={(e) => setSelectedCategory(e.target.value || null)} className="p-2 border rounded">
+    <div className="w-full max-w-8xl mx-auto p-2 md:p-4">
+      <div className="flex flex-col md:flex-row justify-between mb-4">
+        <select value={selectedCategory || ""} onChange={(e) => setSelectedCategory(e.target.value || null)} className="p-2 border rounded mb-2 md:mb-0 md:mr-2">
           <option value="">All Categories</option>
           {categories.map((category, index) => (
             <option key={index} value={category}>
@@ -78,19 +77,19 @@ export default function ThreadList() {
       {loading ? (
         <p className="text-center text-gray-500 text-lg mt-10">Loading threads...</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {filteredThreads.map((thread: ThreadType) => (
-            <div key={thread._id} className="p-8 border rounded shadow-lg bg-white">
-              <div className="flex justify-between items-center mb-2">
-                <h2 className="text-2xl font-bold">
+            <div key={thread._id} className="p-2 md:p-4 border rounded shadow-lg bg-white">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                <h2 className="text-lg md:text-2xl font-bold">
                   <Link href={`/threads/${thread._id}`} className="text-blue-500 hover:underline">
                     {thread.title}
                   </Link>
                 </h2>
-                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">{normalizeCategory(thread.category)}</span>
+                <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded mt-2 md:mt-0">{normalizeCategory(thread.category)}</span>
               </div>
               <p className="text-sm text-gray-500 mb-1">by {thread.author}</p>
-              <p className="mb-4">
+              <p className="mb-4 text-sm md:text-base">
                 {thread.content.length > 100 ? `${thread.content.substring(0, 100)}...` : thread.content}
                 {thread.content.length > 100 && (
                   <Link href={`/threads/${thread._id}`} className="text-blue-500 ml-2">
